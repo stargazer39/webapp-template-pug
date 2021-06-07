@@ -1,0 +1,39 @@
+doctype html
+head
+  meta(charset='utf-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1')
+  link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css')
+  link(rel='stylesheet' href='https://fonts.googleapis.com/icon?family=Material+Icons')
+  link(rel='stylesheet',href='../index.css')
+  if title
+    title #{title}
+  else
+    title Dehemi's Template
+body
+  .container
+    h1.header Dehemi's Template
+    div
+      each f in functions
+        div
+          a.btn(href=f.path)
+            i.material-icons.right arrow_forward
+            | #{f.name}
+  
+  footer(class='page-footer')
+    div(class='container')
+      div(class='row')
+        div(class='col 16 s12')
+          h5(class='white-text')
+          p(class='grey-text text-lighten-4') This is a template made by Dehemi weerakkody for his personal uses
+        div(class='col 14 offset-12 s12')
+          h5(class='white-text') Links 
+          ul
+            each val in [1,2,3,4]
+              li
+                a(class='grey-text text-lighten-3',href='#!') Link #{val}
+
+
+
+
+
