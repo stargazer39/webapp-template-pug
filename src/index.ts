@@ -7,6 +7,8 @@ const port = 8080; // default port to listen
 app.set( "views", path.join( __dirname, "views" ) );
 app.set( "view engine", "pug" );
 
+// add assets folder
+app.use(express.static(path.join(__dirname, "public")));
 // define a route handler for the default home page
 app.get( "/", ( req, res ) => {
     // render the index template
